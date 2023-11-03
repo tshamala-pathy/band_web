@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>My Bands</title>
+    
+    <link rel="stylesheet" href="{% static 'path/to/bootstrap.min.css' %}">
+    <style>
+        .welcome-message {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #126180;
+            border: 1px solid #dee2e6;
+            border-radius: 5px solid;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .welcome-message h1 {
+            font-size: 2em;
+            color: #f5fefd;
+        }
+        .welcome-message p {
+            font-size: 1.2em;
+        }
+        .about-us {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f5fefd;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-info {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #eadab8;
+            border: 1px solid #0000;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        /* Define styles for the band list */
+        .band-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .band-list li {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            padding: 10px;
+            background-color: #0066cc;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .band-list li:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-message">
+            <h1>Welcome to My Bands Website</h1>
+            <p>Discover your favorite bands and their music right here!</p>
+        </div>
+
+        <div class="about-us">
+            <h2>About Us</h2>
+            <p>We are a passionate community of music lovers, dedicated to bringing you the best of the music world.</p>
+        </div>
+
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>Contact us at:</p>
+            <p>Contact Number: <a href="tel:+123456789">+27 (812) 117-770</a></p>
+            <p>Email: <a href="mailto:info@yourwebsite.com">pathypatico999@gmail.com</a></p>
+        </div>
+
+        <h1 class="display-4">List of Bands</h1>
+        <ul class="list-group">
+            {% for band in bands %}
+                <li class="list-group-item">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="{{ band.image_url }}" alt="{{ band.name }}" class="img-thumbnail">
+                        </div>
+                        <div class="col-md-10">
+                            <h3>
+                                <a class="text-decoration-none" href="{% url 'Mysite:band_detail' band.pk %}">{{ band.name }}</a>
+                            </h3>
+                            <p>{{ band.description }}</p>
+                            <p>Genre: {{ band.genre }}</p>
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <script src="{% static 'path/to/bootstrap.min.js' %}"></script>
+</body>
+</html>
