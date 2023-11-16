@@ -1,7 +1,5 @@
 # band_web
 
-# Your Django Project Name
-
 Brief description or tagline about website project.
 
 ## Table of Contents
