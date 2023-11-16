@@ -22,7 +22,7 @@ how to get a copy of the project up and running on a local machine.
 ## 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/your-django-project.git
+git clone https://github.com/tshamala-pathy/band_web.git
 cd Website
 
 
