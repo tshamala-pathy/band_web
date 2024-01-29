@@ -6,7 +6,7 @@ Welcome to **Band Web**, a Django-based web application designed to showcase inf
 
 ## Brief Description
 
-**Band Web** is a Django-based web application that serves as a platform for showcasing information about music bands and their albums. With features such as a robust band model, user authentication, and a user-friendly interface, the project demonstrates proficiency in full-stack web development. The application utilizes Django, Python, HTML, and CSS, providing a seamless user experience for exploring and managing music-related data.
+**Band Web** is a Django-based web application that serves as a platform for showcasing information about music bands and their albums. With features such as a robust band model, user authentication, and a user-friendly interface, the project demonstrates proficiency in  web development. The application utilizes Django, Python, HTML, and CSS, providing a seamless user experience for exploring and managing music-related data.
 
 ## Features
 
@@ -23,7 +23,7 @@ Welcome to **Band Web**, a Django-based web application designed to showcase inf
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/<Your_GitHub_Username>/band_web.git
+    git clone https://github.com/tshamala-pathy/band_web.git
     ```
 
 2. Navigate to the project directory:
